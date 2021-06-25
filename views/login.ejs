@@ -1,0 +1,31 @@
+<% let errorMessage = ''; if(messages.error){ errorMessage = messages.error[0];
+} if(locals.messages.isRegistered){errorMessage = locals.messages.isRegistered}
+let registerSuccessMessage = locals.messages.registerSuccess || ''; let
+accountUpdateMessage = locals.messages.accountUpdateMessage || '';%>
+
+<link rel="stylesheet" href="/auth.css" />
+<title>The Generics | LOGIN</title>
+<header class="main-header">
+  <a href="/home"
+    ><h1 class="site-name">The<span>Generics</span></h1>
+  </a>
+</header>
+
+<div class="form">
+  <h2>Login</h2>
+  <form action="/auth/login" method="POST">
+    <div class="email error"><%=errorMessage%></div>
+    <div class="email success"><%=registerSuccessMessage%></div>
+    <div class="email success"><%=accountUpdateMessage%></div>
+    <label for="email">Email</label>
+    <input type="email" name="email" required />
+    <label for="password">Password</label>
+    <input type="password" name="password" required />
+    <div class="password error"></div>
+    <button>login</button>
+  </form>
+  <div class="form-bottom">
+    <a href="/auth/google"><button id="google">Continue with Google</button></a>
+    <div id="redirect">New Here? <a href="/auth/signup">Sign Up</a></div>
+  </div>
+</div>

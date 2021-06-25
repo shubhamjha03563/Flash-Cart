@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/auth.css" />
+<title>The Generics | SIGNUP</title>
+<header class="main-header">
+  <a href="/home"
+    ><h1 class="site-name">The<span>Generics</span></h1>
+  </a>
+</header>
+
+<div class="form">
+  <h2>Sign up</h2>
+  <form action="/auth/signup" method="POST">
+    <label for="text">Name</label>
+    <input type="text" name="name" required />
+    <label for="email">Email</label>
+    <input type="email" name="email" required />
+    <div class="email error"></div>
+    <label for="password">Password</label>
+    <input type="password" name="password" required />
+    <div class="password error"></div>
+    <button>Sign up</button>
+  </form>
+  <div class="form-bottom">
+    <a href="/auth/google"><button id="google">Sign In with Google</button></a>
+    <div id="redirect">Have an account? <a href="/auth/login">Login</a></div>
+  </div>
+</div>

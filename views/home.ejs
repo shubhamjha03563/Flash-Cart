@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Generics | HOME</title>
+    <meta name="" content="" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="home.js" async></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="/home"><h1 class="site-name">The<span>Generics</span></h1></a>
+      <nav>
+        <ul class="nav__links">
+          <%if(!user){%>
+          <li><a href="/home"><button id="home">Home</button></a></li>
+          <li><a href="/auth/login"><button id="login">Login</button></a></li>
+          <li><a href="/auth/signup"><button id="signup">Sign Up</button></a></li>
+          <%} else { %>
+          <li>
+            <a href="/home"><button id="home">Home</button></a>
+          </li>
+          <li>
+            <a href="/auth/logout"><button id="logout">Logout</button></a>
+          </li>
+          <li id="username"><%=user.name%></li>
+        <%}%>
+      </ul>
+      </nav>
+    </header>
+    <section class="container content-section">
+      <div class="shop-items">
+        <% items.forEach(item => { %>
+        <div class="shop-item">
+          <img class="shop-item-image" src="Images/<%=item.imgName%>" />
+          <div class="shop-item-title"><%=item.name%></div>
+          <div class="shop-item-details">
+            <span class="shop-item-price">$ <%=item.price/100%></span>
+            <button class="btn btn-primary shop-item-button" type="button">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+        <% }) %>
+    </section>
+    
+    <section class="cart content-section">
+      <h2 class="cart-header">CART</h2>
+      <div class="cart-items">
+        
+        <%if(totalPrice > 0) {
+          cartItems.forEach(item => { %>
+          <div class="cart-row">
+            <div class="cart-item">
+              <div><img
+                class="cart-item-image"
+                src="Images/<%=item.imgName%>"
+                width="100"
+                height="100"
+              /></div>
+              <div class="cart-item-title"><%=item.name%></div>
+            </div>
+            <div class="cart-quantity">
+              <div class="cart-price cart-col-2">$ <%=item.price/100%></div>
+              <div><input class="cart-quantity-input cart-col-2" type="number" value="<%=item.quantity%>" /> </div>
+              <div><button class="btn btn-danger cart-col-2" type="button">REMOVE</button></div>
+            </div>
+          </div>
+        <% })}; %>
+      </div>
+        
+      <div class="cart-total">
+        <strong class="cart-total-title">TOTAL - </strong>
+        <span class="cart-total-price">$ <%=totalPrice/100%></span>
+      </div>
+      <button class="btn btn-primary btn-purchase" type="button">
+        PURCHASE
+      </button>
+    </section>
+  </body>
+</html>

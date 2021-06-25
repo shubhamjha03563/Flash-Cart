@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 8%;
+}
+
+.site-name {
+  font-size: 40px;
+  border-top: #500472 3px solid;
+  border-bottom: #500472 3px solid;
+  color: #500472;
+}
+.site-name span {
+  background-color: #500472;
+  padding: 2px 15px;
+  color: white;
+  margin-left: 10px;
+  margin-right: 0;
+  border-radius: 2px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.666);
+}
+
+h2,
+input,
+label,
+button,
+div {
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  text-decoration: none;
+  color: #500472;
+}
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 2.4em;
+  font-weight: 900;
+  margin-bottom: 20px;
+  padding: 20px;
+  color: white;
+  background-color: #500472;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.449);
+}
+
+.form {
+  width: 360px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background: white;
+  background-color: white;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.646);
+  margin-top: 30px;
+}
+
+form,
+.form-bottom {
+  padding: 0px 30px 20px 30px;
+  margin: 0px;
+}
+
+input {
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin: 20px 0 10px;
+}
+
+button {
+  margin-top: 30px;
+  border-radius: 36px;
+  background: #500472;
+  color: white;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.666);
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.666);
+  transition: all 0.3s ease;
+}
+
+#google {
+  margin: 0px;
+  border-radius: 36px;
+  color: white;
+  background-color: #4285f4;
+  border: 0;
+  font-size: 0.8em;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#redirect {
+  padding-top: 20px;
+  border: 0;
+  font-size: 0.8em;
+  padding-left: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#redirect a {
+  border-bottom: white 2px solid;
+  color: #500472;
+  padding-bottom: 2px;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+#redirect a:hover {
+  transition: all 0.3s ease;
+  color: #d902ee;
+}
+
+.error {
+  color: red;
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.success {
+  color: rgb(14, 165, 14);
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
