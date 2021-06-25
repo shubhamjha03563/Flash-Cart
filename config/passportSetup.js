@@ -82,6 +82,5 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser(async (id, done) => {
   let user = await User.findById(id);
-  // addLocalCartItemsToUserCart(user);
   done(null, user);
 });
