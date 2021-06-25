@@ -1,4 +1,4 @@
-# BlogFever API
+# The Generics
 
 > E-commerce app with a solid backend build and a simple front-end. Main focus is on auth, oauth and user cart operations.
 
