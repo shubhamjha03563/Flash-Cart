@@ -105,9 +105,14 @@ button {
 
 .shop-items {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  padding: 30px 8%;
+
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .shop-item-image {
@@ -122,9 +127,8 @@ button {
 
 .shop-item {
   padding: 0px;
-  margin: 20px;
   border-radius: 20px;
-  margin: 20px 50px;
+  margin: 0px 30px 30px 0px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.317);
 }
 
@@ -171,28 +175,30 @@ button {
 }
 
 .cart {
-  padding-left: 100px;
+  color: #500472;
+  align-items: center;
+  padding: 30px 8%;
 }
 
 .cart-header {
   font-size: xx-large;
   color: #500472;
+  padding-left: 10px;
+  border-left: #500472 10px solid;
+  margin-bottom: 30px;
 }
 
 .cart-items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
 }
 
 .cart-row {
-  background-color: white;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.326);
-  margin: 10px 60px 20px 0px;
-  display: flex;
-  width: 20%;
+  padding: 10px;
   border-radius: 20px;
-  color: #500472;
+  margin: 0px 20px 40px 0px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.317);
+  display: flex;
 }
 
 .cart-row:hover {
